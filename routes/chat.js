@@ -8,7 +8,6 @@ var Chat = require('../models/Chat.js');
 
 server.listen(4000);
 
-// socket io
 io.on('connection', function (socket) {
   console.log('User connected');
   socket.on('disconnect', function() {
@@ -20,7 +19,6 @@ io.on('connection', function (socket) {
   });
 });
 
-/* GET ALL CHATS */
 router.get('/:room', function(req, res, next) {
   Chat.find({ room: req.params.room }, function (err, chats) {
     if (err) return next(err);
@@ -28,7 +26,6 @@ router.get('/:room', function(req, res, next) {
   });
 });
 
-/* SAVE CHAT */
 router.post('/', function(req, res, next) {
   Chat.create(req.body, function (err, post) {
     if (err) return next(err);
