@@ -1,9 +1,9 @@
 Mean Stack Chatting Application
 
-  Steps to Build the project
+    Steps to Build the project
   
-    1. npm install
+        1. npm install
     
-    2. ng build --prod
+        2. ng build --prod
     
-    3. npm start
+        3. npm start
